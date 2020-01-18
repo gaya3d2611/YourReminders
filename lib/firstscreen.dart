@@ -76,13 +76,15 @@ class FirstScreenState extends State<FirstScreen> {
                           return Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Card(
+                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20.0))),
                               elevation: 0,
-                              color: Colors.white,
-                              child: new ListTile(
+                              color: Color(0xB3ffffff),
+                              child: FlatButton(onPressed: (){
+                                transport(remider());
+                              }, child: new ListTile(
                                 title: new Text(document['title']),
                                 subtitle: new Text(document['body']),
-                              ),
-
+                              ),)
                             ),
                           );
                         }
